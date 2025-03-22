@@ -72,7 +72,3 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
-
-# XR and XR Interaction Toolkit generated files
-/[Aa]ssets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset
-/[Aa]ssets/XRI/Settings/Resources/XRDeviceSimulatorSettings.asset.meta
