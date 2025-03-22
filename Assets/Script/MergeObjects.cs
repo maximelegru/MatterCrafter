@@ -31,15 +31,31 @@ public class MergeObjects : MonoBehaviour
         MergeObjects otherMergeScript = collision.gameObject.GetComponent<MergeObjects>();
 
         if (otherMergeScript != null && !isMerging && !otherMergeScript.isMerging)
-        {
-            isMerging = true;
-            otherMergeScript.isMerging = true;
+        {// Vérifier si les objets ont le même tag
+            if (gameObject.tag == collision.gameObject.tag)
+            {
+                isMerging = true;
+                otherMergeScript.isMerging = true;
 
-            Vector3 spawnPosition = (transform.position + collision.transform.position) / 2;
-            Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+                // Grossir l'objet actuel
+                Vector3 newScale = transform.localScale * 1.5f; // Augmente la taille de 50%
+                transform.localScale = newScale;
 
-            Destroy(collision.gameObject);
-            Destroy(gameObject);
+                // Détruire l'autre objet
+                Destroy(collision.gameObject);
+            }
+            else
+            {
+                // Comportement existant pour des objets de tags différents
+                isMerging = true;
+                otherMergeScript.isMerging = true;
+
+                Vector3 spawnPosition = (transform.position + collision.transform.position) / 2;
+                Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
+
+                Destroy(collision.gameObject);
+                Destroy(gameObject);
+            }
         }
 
     }
