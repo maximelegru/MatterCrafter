@@ -5,6 +5,14 @@ TagManager:
   serializedVersion: 3
   tags:
   - Anchor
+  - FxTemporaire
+  - Door
+  - TriggerZone
+  - Duplicate
+  - Eau
+  - Terre
+  - Feu
+  - Air
   layers:
   - Default
   - TransparentFX

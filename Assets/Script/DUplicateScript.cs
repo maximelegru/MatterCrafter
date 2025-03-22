@@ -9,8 +9,8 @@ public class DUplicateScript : MonoBehaviour
     private Rigidbody rb;
     private bool isGrabbed = false;
     private bool canDuplicate = true;
-    private float duplicateDelay = 1f; // Délai en secondes
-    private float destroyDelay = 3f; // Délai avant destruction
+    private float duplicateDelay = 2.6f; // Délai en secondes
+    private float destroyDelay = 2f; // Délai avant destruction
     private bool isReleased = false;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
 
@@ -43,6 +43,7 @@ public class DUplicateScript : MonoBehaviour
             if (gameObject.tag != "Duplicate")
             {
                 DuplicateObject();
+                canDuplicate = false;
                 StartCoroutine(DuplicateCooldown());
             }
         }
@@ -50,9 +51,12 @@ public class DUplicateScript : MonoBehaviour
 
     private IEnumerator DuplicateCooldown()
     {
-        canDuplicate = false;
+        Debug.Log("Début du cooldown");
+        // Attendre le délai spécifié
         yield return new WaitForSeconds(duplicateDelay);
+        // Réactiver la possibilité de dupliquer
         canDuplicate = true;
+        Debug.Log("Fin du cooldown - Duplication à nouveau possible");
     }
 
     private void OnRelease(SelectExitEventArgs args)
@@ -60,6 +64,7 @@ public class DUplicateScript : MonoBehaviour
         isGrabbed = false;
         isReleased = true;
         rb.useGravity = true; // Réactiver la gravité quand l'objet est relâché
+
         if (gameObject.tag == "Duplicate")
         {
             StartCoroutine(DestroyAfterDelay());
@@ -67,7 +72,6 @@ public class DUplicateScript : MonoBehaviour
         else
         {
             isReleased = false;
-            canDuplicate = true;
         }
     }
 
@@ -110,6 +114,10 @@ public class DUplicateScript : MonoBehaviour
             duplicateRb.linearVelocity = Vector3.zero;
             duplicateRb.angularVelocity = Vector3.zero;
             duplicateRb.useGravity = true;
+            // Ajouter une force pour éloigner les duplicatas
+            duplicateRb.AddForce(offset * 100f, ForceMode.Impulse);
+            // Enlever les contraintes de position et de rotation
+            duplicateRb.constraints = RigidbodyConstraints.None;
         }
     }
 
