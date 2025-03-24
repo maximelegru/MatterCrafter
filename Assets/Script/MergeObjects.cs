@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using System;
+using System.Collections.Generic;
+using System.Linq; // Ajout de cette ligne pour utiliser LINQ
 
 public class MergeObjects : MonoBehaviour
 {
 
     private Rigidbody rb;
     public bool triggerActivated = false;
-    public GameObject objectToSpawn;
     public bool isMerging = false;
     private Camera mainCamera;
     private PlayerInput playerInput;
@@ -19,6 +20,9 @@ public class MergeObjects : MonoBehaviour
         mainCamera = Camera.main;
         playerInput = GetComponent<PlayerInput>();
 
+        Debug.Log($"MergeObjects initialisé sur {gameObject.name} avec tag: {gameObject.tag}");
+        Debug.Log($"Nombre de règles de fusion: {mergeRules.Count}");
+
     }
 
     // Update is called once per frame
@@ -26,46 +30,73 @@ public class MergeObjects : MonoBehaviour
     {
     }
 
-    void OnCollisionEnter(Collision collision)
+    [Serializable]
+    public struct MergeRule
     {
-        MergeObjects otherMergeScript = collision.gameObject.GetComponent<MergeObjects>();
-
-        if (otherMergeScript != null && !isMerging && !otherMergeScript.isMerging)
-        {// Vérifier si les objets ont le même tag
-            if (gameObject.tag == collision.gameObject.tag)
-            {
-                isMerging = true;
-                otherMergeScript.isMerging = true;
-
-                // Grossir l'objet actuel
-                Vector3 newScale = transform.localScale * 1.5f; // Augmente la taille de 50%
-                transform.localScale = newScale;
-
-                // Détruire l'autre objet
-                Destroy(collision.gameObject);
-            }
-            else
-            {
-                // Comportement existant pour des objets de tags différents
-                isMerging = true;
-                otherMergeScript.isMerging = true;
-
-                Vector3 spawnPosition = (transform.position + collision.transform.position) / 2;
-                Instantiate(objectToSpawn, spawnPosition, Quaternion.identity);
-
-                Destroy(collision.gameObject);
-                Destroy(gameObject);
-            }
-        }
-
+        public string tag1;
+        public string tag2;
+        public GameObject resultPrefab;
     }
 
-    private GameObject GetMergedObject(MergeObjects obj1, MergeObjects obj2)
+    [SerializeField]
+    private List<MergeRule> mergeRules = new List<MergeRule>();
+
+    void OnCollisionEnter(Collision collision)
     {
-        // Exemple de logique : Assigner manuellement les combinaisons
-        if (obj1.objectToSpawn != obj2.objectToSpawn)
+        Debug.Log($"Collision détectée avec {collision.gameObject.name}");
+        Debug.Log($"L'objet est-il actif? {collision.gameObject.activeInHierarchy}");
+
+        Component[] components = collision.gameObject.GetComponents<Component>();
+        string componentList = "";
+        foreach (Component c in components)
         {
-            return obj1.objectToSpawn; // Choisir une logique selon le projet
+            componentList += c.GetType().Name + ", ";
+        }
+        Debug.Log($"Components sur l'objet: {componentList}");
+
+        // Récupération du script MergeObjects de l'autre objet
+        MergeObjects otherMergeScript = collision.gameObject.GetComponent<MergeObjects>();
+
+        if (otherMergeScript == null)
+        {
+            Debug.Log("L'autre objet n'a pas de MergeObjects script");
+            return;
+        }
+
+        if (isMerging || otherMergeScript.isMerging)
+        {
+            Debug.Log("Un des objets est déjà en train de fusionner");
+            return;
+        }
+
+        Debug.Log($"Tentative de fusion entre tags: {gameObject.tag} et {collision.gameObject.tag}");
+        GameObject resultObject = GetMergedObject(gameObject.tag, collision.gameObject.tag);
+
+        if (resultObject == null)
+        {
+            Debug.Log("Aucune règle de fusion trouvée pour ces tags");
+            return;
+        }
+
+        // Le reste du code reste identique
+        isMerging = true;
+        otherMergeScript.isMerging = true;
+        Vector3 spawnPosition = (transform.position + collision.transform.position) / 2;
+        Instantiate(resultObject, spawnPosition, Quaternion.identity);
+        Destroy(collision.gameObject);
+        Destroy(gameObject);
+    }
+
+    private GameObject GetMergedObject(string tag1, string tag2)
+    {
+        // Chercher dans les règles de fusion
+        foreach (MergeRule rule in mergeRules)
+        {
+            if ((rule.tag1 == tag1 && rule.tag2 == tag2) ||
+                (rule.tag1 == tag2 && rule.tag2 == tag1))
+            {
+                return rule.resultPrefab;
+            }
         }
         return null;
     }

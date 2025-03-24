@@ -90,7 +90,7 @@ public class DUplicateScript : MonoBehaviour
         if (isReleased) return; // Ne pas dupliquer si relâché
 
         // Calculer une position légèrement décalée pour le duplicata
-        Vector3 offset = new Vector3(0f, 0f, 1f); // Décalage de 1 unité sur l'axe X
+        Vector3 offset = new Vector3(0f, 0f, -1f); // Décalage de 1 unité sur l'axe X
         Vector3 spawnPosition = transform.position + offset;
 
         // Créer le duplicata
@@ -99,6 +99,8 @@ public class DUplicateScript : MonoBehaviour
         try
         {
             duplicate.tag = "Duplicate";
+            // And add tag of the original object
+            duplicate.tag = gameObject.tag;
         }
         catch (UnityException e)
         {
