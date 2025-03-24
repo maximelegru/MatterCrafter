@@ -22805,7 +22805,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 10
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!114 &983070437
 MonoBehaviour:
@@ -33084,7 +33084,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 10
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!114 &1371675397
 MonoBehaviour:
@@ -44693,7 +44693,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 10
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!114 &1865514041
 MonoBehaviour:
@@ -46551,7 +46551,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 10
+  m_Constraints: 14
   m_CollisionDetection: 0
 --- !u!114 &1909389637
 MonoBehaviour:
@@ -46568,14 +46568,14 @@ MonoBehaviour:
   triggerActivated: 0
   isMerging: 0
   mergeRules:
-  - tag1: Eau
-    tag2: Feu
+  - tag1: Feu
+    tag2: Eau
     resultPrefab: {fileID: 9052180831269164940, guid: 0ef058d1abb0d454b8323b3347d2ec76, type: 3}
-  - tag1: Eau
-    tag2: Terre
+  - tag1: Terre
+    tag2: Eau
     resultPrefab: {fileID: 832986519044578231, guid: 1b617fdd6d389417ea642c633ad9ff92, type: 3}
-  - tag1: Eau
-    tag2: Air
+  - tag1: Air
+    tag2: Eau
     resultPrefab: {fileID: 570376592995734635, guid: e63ca436105f1453a8b2d085aee78c36, type: 3}
 --- !u!135 &1909389638
 SphereCollider:
