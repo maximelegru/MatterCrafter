@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1996740630646965657}
   - component: {fileID: 3352362696341276183}
   m_Layer: 0
-  m_Name: objectToSpawn
+  m_Name: Vapeur
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
