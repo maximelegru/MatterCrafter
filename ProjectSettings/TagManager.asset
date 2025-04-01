@@ -8,11 +8,29 @@ TagManager:
   - FxTemporaire
   - Door
   - TriggerZone
-  - Duplicate
   - Eau
   - Terre
   - Feu
   - Air
+  - DuplicateEau
+  - DuplicateFeu
+  - DuplicateAir
+  - DuplicateTerre
+  - Duplicate
+  - Vapeur
+  - Pluie
+  - Boue
+  - Vent
+  - "Poussi\xE8re"
+  - Energie
+  - Montagne
+  - Lave
+  - DuplicateVapeur
+  - DuplicatePluie
+  - DuplicateBoue
+  - DuplicateVent
+  - "DuplicatePoussi\xE8re"
+  - DuplicateEnergie
   layers:
   - Default
   - TransparentFX

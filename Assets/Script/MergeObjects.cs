@@ -33,6 +33,7 @@ public class MergeObjects : MonoBehaviour
     [Serializable]
     public struct MergeRule
     {
+        public string ruleName; // Nom de la règle de fusion
         public string tag1;
         public string tag2;
         public GameObject resultPrefab;
@@ -95,6 +96,20 @@ public class MergeObjects : MonoBehaviour
             if ((rule.tag1 == tag1 && rule.tag2 == tag2) ||
                 (rule.tag1 == tag2 && rule.tag2 == tag1))
             {
+                Debug.Log($"Règle de fusion trouvée : {rule.ruleName}");
+                Debug.Log($"Tags : {rule.tag1} et {rule.tag2}");
+                Debug.Log($"Objet résultant : {rule.resultPrefab.name}");
+                // Vérifier si le prefab résultant est actif
+                if (rule.resultPrefab == null)
+                {
+                    Debug.LogError($"Le prefab résultant de la règle {rule.ruleName} est null");
+                    return null;
+                }
+                if (!rule.resultPrefab.activeInHierarchy)
+                {
+                    Debug.LogError($"Le prefab résultant de la règle {rule.ruleName} n'est pas actif");
+                    return null;
+                }
                 return rule.resultPrefab;
             }
         }

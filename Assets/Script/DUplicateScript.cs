@@ -2,25 +2,21 @@ using UnityEngine;
 using UnityEngine.XR.Interaction.Toolkit;
 using System.Collections;
 
-
-public class DUplicateScript : MonoBehaviour
+public class FusionObject : MonoBehaviour
 {
-
     private Rigidbody rb;
     private bool isGrabbed = false;
     private bool canDuplicate = true;
-    private float duplicateDelay = 2.6f; // Délai en secondes
-    private float destroyDelay = 2f; // Délai avant destruction
+    private float duplicateDelay = 2f;
+    private float destroyDelay = 2f;
     private bool isReleased = false;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         rb = GetComponent<Rigidbody>();
         grabInteractable = GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
 
-        // Ajouter des listeners pour les événements de grab
         if (grabInteractable != null)
         {
             grabInteractable.selectEntered.AddListener(OnGrab);
@@ -28,19 +24,15 @@ public class DUplicateScript : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
     private void OnGrab(SelectEnterEventArgs args)
     {
         if (!isGrabbed && canDuplicate)
         {
             isGrabbed = true;
-            rb.useGravity = false; // Désactiver la gravité quand l'objet est attrapé
-            if (gameObject.tag != "Duplicate")
+            rb.useGravity = false;
+
+            // Ne dupliquer que si ce n'est pas déjà un duplicata
+            if (!gameObject.tag.StartsWith("Duplicate"))
             {
                 DuplicateObject();
                 canDuplicate = false;
@@ -49,78 +41,102 @@ public class DUplicateScript : MonoBehaviour
         }
     }
 
-    private IEnumerator DuplicateCooldown()
-    {
-        Debug.Log("Début du cooldown");
-        // Attendre le délai spécifié
-        yield return new WaitForSeconds(duplicateDelay);
-        // Réactiver la possibilité de dupliquer
-        canDuplicate = true;
-        Debug.Log("Fin du cooldown - Duplication à nouveau possible");
-    }
-
     private void OnRelease(SelectExitEventArgs args)
     {
         isGrabbed = false;
         isReleased = true;
-        rb.useGravity = true; // Réactiver la gravité quand l'objet est relâché
+        rb.useGravity = true;
 
-        if (gameObject.tag == "Duplicate")
+        if (gameObject.tag.StartsWith("Duplicate"))
         {
             StartCoroutine(DestroyAfterDelay());
         }
-        else
-        {
-            isReleased = false;
-        }
+    }
+
+    private IEnumerator DuplicateCooldown()
+    {
+        yield return new WaitForSeconds(duplicateDelay);
+        canDuplicate = true;
     }
 
     private IEnumerator DestroyAfterDelay()
     {
         yield return new WaitForSeconds(destroyDelay);
-        // Vérifier si l'objet est toujours relâché et que le tag est "Duplicate"
-        if (isReleased && gameObject.tag == "Duplicate")
+        if (isReleased && gameObject.tag.StartsWith("Duplicate"))
         {
             Destroy(gameObject);
         }
     }
 
-    void DuplicateObject()
+    private void DuplicateObject()
     {
-        if (isReleased) return; // Ne pas dupliquer si relâché
-
-        // Calculer une position légèrement décalée pour le duplicata
-        Vector3 offset = new Vector3(0f, 0f, -1f); // Décalage de 1 unité sur l'axe X
+        // Position de spawn avec un décalage
+        Vector3 offset = new Vector3(0f, 0f, -0.5f);
         Vector3 spawnPosition = transform.position + offset;
 
         // Créer le duplicata
         GameObject duplicate = Instantiate(gameObject, spawnPosition, transform.rotation);
 
-        try
-        {
-            duplicate.tag = "Duplicate";
-            // And add tag of the original object
-            duplicate.tag = gameObject.tag;
-        }
-        catch (UnityException e)
-        {
-            Debug.Log("Impossible de changer le tag de l'objet : " + e.Message);
-            Destroy(duplicate);
-            return;
-        }
+        // Définir le nouveau tag
+        string newTag = "Duplicate" + gameObject.tag;
+        duplicate.tag = newTag;
 
-        // Réinitialiser la physique du duplicata
+        // Configurer la physique du duplicata
         Rigidbody duplicateRb = duplicate.GetComponent<Rigidbody>();
         if (duplicateRb != null)
         {
             duplicateRb.linearVelocity = Vector3.zero;
             duplicateRb.angularVelocity = Vector3.zero;
             duplicateRb.useGravity = true;
-            // Ajouter une force pour éloigner les duplicatas
-            duplicateRb.AddForce(offset * 100f, ForceMode.Impulse);
-            // Enlever les contraintes de position et de rotation
+            duplicateRb.AddForce(offset.normalized * 2f, ForceMode.Impulse);
+            duplicateRb.isKinematic = false;
             duplicateRb.constraints = RigidbodyConstraints.None;
+        }
+
+        var duplicateGrab = duplicate.GetComponent<UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable>();
+        if (duplicateGrab != null)
+        {
+            // Désactiver les contraintes de mouvement
+            duplicateGrab.trackPosition = true;
+            duplicateGrab.trackRotation = true;
+            duplicateGrab.smoothPosition = false;
+            duplicateGrab.smoothRotation = false;
+            duplicateGrab.throwOnDetach = true;
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        // Vérifier si l'un des objets est un duplicata
+        if (gameObject.tag.StartsWith("Duplicate"))
+        {
+            GameObject otherObject = collision.gameObject;
+
+            // Vérifier si l'autre objet a le même tag de base
+            if (otherObject.tag.StartsWith("Duplicate") && HasSameBaseTag(otherObject))
+            {
+                MergeObjects(otherObject);
+            }
+        }
+    }
+
+    private bool HasSameBaseTag(GameObject other)
+    {
+        string thisBaseTag = gameObject.tag.Replace("Duplicate", "");
+        string otherBaseTag = other.tag.Replace("Duplicate", "");
+        return thisBaseTag == otherBaseTag;
+    }
+
+    private void MergeObjects(GameObject other)
+    {
+        // Calculer la position moyenne
+        Vector3 mergedPosition = (transform.position + other.transform.position) / 2f;
+
+        // Augmenter la taille de l'objet actuel
+        transform.localScale *= 1.2f;
+        transform.position = mergedPosition;
+
+        // Détruire l'autre objet
+        Destroy(other);
+    }
 }
