@@ -35,6 +35,7 @@ TagManager:
   - Rack
   - QuestMontagne
   - QuestPluie
+  - QuestCounter
   layers:
   - Default
   - TransparentFX
