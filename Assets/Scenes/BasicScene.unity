@@ -47227,6 +47227,10 @@ MonoBehaviour:
     tag1: DuplicateAir
     tag2: DuplicateTerre
     resultPrefab: {fileID: 4962893894672398342, guid: 33754d97e012d48de8391f4bbe4cdd10, type: 3}
+  - ruleName: Montagne
+    tag1: DuplicateTerre
+    tag2: DuplicateTerre
+    resultPrefab: {fileID: 3935474417820776596, guid: e33b79a77d00649f38861aeb9d6924f0, type: 3}
   missionText: {fileID: 784574209}
 --- !u!135 &1865514042
 SphereCollider:
