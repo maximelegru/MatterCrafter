@@ -103,70 +103,27 @@ public class MergeObjects : MonoBehaviour
             isMerging = true;
             otherMergeScript.isMerging = true;
 
-            // Calculer la position dans le Rack
-            Vector3 spawnPosition = rackTransform != null ? rackTransform.position :
+            // Position dans le Rack
+            Vector3 rackPosition = rackTransform != null ? rackTransform.position :
                 (transform.position + collision.transform.position) / 2;
 
-            // Instancier l'objet
-            GameObject newObject = Instantiate(resultObject, spawnPosition, Quaternion.identity);
+            // Position devant le joueur
+            Vector3 playerPosition = Camera.main.transform.position + Camera.main.transform.forward * 2f;
 
-            // S'assurer que le nouvel objet a tous les composants nécessaires
-            if (!newObject.GetComponent<MergeObjects>())
-            {
-                // Ajouter le script MergeObjects s'il n'existe pas
-                MergeObjects newMergeScript = newObject.AddComponent<MergeObjects>();
-                // Copier les règles de fusion
-                newMergeScript.mergeRules = this.mergeRules;
-                // Référencer le même rack
-                newMergeScript.rackTransform = this.rackTransform;
-                // Référencer le même MissionText
-                newMergeScript.missionText = this.missionText;
-            }
+            // Instancier l'objet dans le rack
+            GameObject rackObject = Instantiate(resultObject, rackPosition, Quaternion.identity);
 
-            // Ajouter un Rigidbody si nécessaire
-            if (!newObject.GetComponent<Rigidbody>())
-            {
-                Rigidbody rb = newObject.AddComponent<Rigidbody>();
-                rb.useGravity = true;
-                rb.isKinematic = false;
-            }
+            // Instancier l'objet devant le joueur
+            GameObject playerObject = Instantiate(resultObject, playerPosition, Quaternion.identity);
 
-            // Parenter l'objet au Rack
-            if (rackTransform != null)
-            {
-                newObject.transform.SetParent(rackTransform);
+            // Configurer l'objet du rack
+            ConfigureNewObject(rackObject, true);  // true pour indiquer que c'est l'objet du rack
 
-                // Organiser les objets dans le Rack
-                ArrangeObjectsInRack();
-            }
+            // Configurer l'objet du joueur
+            ConfigureNewObject(playerObject, false);  // false pour indiquer que ce n'est pas l'objet du rack
 
-            // Incrémenter le compteur de fusion
-            fusionCount++;
-            Debug.Log($"Fusion effectuée ! Total : {fusionCount}/{requiredFusions}");
-
-            // Mettre à jour le texte si nécessaire
-            if (missionText != null)
-            {
-                missionText.UpdateFusionCount(fusionCount, requiredFusions);
-            }
-
-            // Après une fusion réussie, vérifier si l'objet créé est une montagne
-            if (newObject.CompareTag("Montagne"))
-            {
-                if (missionText != null)
-                {
-                    missionText.CheckObjectExistence();
-                }
-            }
-
-            // Après une fusion réussie, vérifier si l'objet créé est de la pluie
-            if (newObject.CompareTag("Pluie"))
-            {
-                if (missionText != null)
-                {
-                    missionText.CheckRainObjectExistence();
-                }
-            }
+            // Incrémenter le compteur de fusion et mettre à jour les missions
+            HandleFusionCompletion(playerObject);
 
             Destroy(collision.gameObject);
             Destroy(gameObject);
@@ -222,6 +179,52 @@ public class MergeObjects : MonoBehaviour
             }
         }
         return null;
+    }
+
+    // Nouvelle méthode pour configurer les objets
+    private void ConfigureNewObject(GameObject newObject, bool isRackObject)
+    {
+        if (!newObject.GetComponent<MergeObjects>())
+        {
+            MergeObjects newMergeScript = newObject.AddComponent<MergeObjects>();
+            newMergeScript.mergeRules = this.mergeRules;
+            newMergeScript.rackTransform = this.rackTransform;
+            newMergeScript.missionText = this.missionText;
+        }
+
+        if (!newObject.GetComponent<Rigidbody>())
+        {
+            Rigidbody rb = newObject.AddComponent<Rigidbody>();
+            rb.useGravity = true;
+            rb.isKinematic = false;
+        }
+
+        if (isRackObject && rackTransform != null)
+        {
+            newObject.transform.SetParent(rackTransform);
+            ArrangeObjectsInRack();
+        }
+    }
+
+    // Nouvelle méthode pour gérer la complétion de fusion
+    private void HandleFusionCompletion(GameObject newObject)
+    {
+        fusionCount++;
+        Debug.Log($"Fusion effectuée ! Total : {fusionCount}/{requiredFusions}");
+
+        if (missionText != null)
+        {
+            missionText.UpdateFusionCount(fusionCount, requiredFusions);
+
+            if (newObject.CompareTag("Montagne"))
+            {
+                missionText.CheckObjectExistence();
+            }
+            else if (newObject.CompareTag("Pluie"))
+            {
+                missionText.CheckRainObjectExistence();
+            }
+        }
     }
 }
 
