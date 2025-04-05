@@ -33,6 +33,7 @@ TagManager:
   - DuplicateEnergie
   - QuestFusion
   - Rack
+  - QuestMontagne
   layers:
   - Default
   - TransparentFX
