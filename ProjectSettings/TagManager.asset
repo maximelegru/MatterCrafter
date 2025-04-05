@@ -31,6 +31,8 @@ TagManager:
   - DuplicateVent
   - "DuplicatePoussi\xE8re"
   - DuplicateEnergie
+  - QuestFusion
+  - Rack
   layers:
   - Default
   - TransparentFX

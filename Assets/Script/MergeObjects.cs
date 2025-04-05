@@ -12,6 +12,9 @@ public class MergeObjects : MonoBehaviour
     public bool isMerging = false;
     private Camera mainCamera;
     private PlayerInput playerInput;
+    private static int fusionCount = 0;  // Static pour partager le compteur entre tous les objets
+    [SerializeField] private int requiredFusions = 1;
+    [SerializeField] private Transform rackTransform; // Référence au Rack
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -23,6 +26,19 @@ public class MergeObjects : MonoBehaviour
         Debug.Log($"MergeObjects initialisé sur {gameObject.name} avec tag: {gameObject.tag}");
         Debug.Log($"Nombre de règles de fusion: {mergeRules.Count}");
 
+        if (rackTransform == null)
+        {
+            // Chercher automatiquement le Rack s'il n'est pas assigné
+            GameObject rack = GameObject.FindGameObjectWithTag("Rack");
+            if (rack != null)
+            {
+                rackTransform = rack.transform;
+            }
+            else
+            {
+                Debug.LogWarning("Aucun Rack trouvé dans la scène!");
+            }
+        }
     }
 
     // Update is called once per frame
@@ -41,6 +57,9 @@ public class MergeObjects : MonoBehaviour
 
     [SerializeField]
     private List<MergeRule> mergeRules = new List<MergeRule>();
+
+    [SerializeField] private MissionText missionText; // Référence au script MissionText
+
 
     void OnCollisionEnter(Collision collision)
     {
@@ -79,13 +98,87 @@ public class MergeObjects : MonoBehaviour
             return;
         }
 
-        // Le reste du code reste identique
-        isMerging = true;
-        otherMergeScript.isMerging = true;
-        Vector3 spawnPosition = (transform.position + collision.transform.position) / 2;
-        Instantiate(resultObject, spawnPosition, Quaternion.identity);
-        Destroy(collision.gameObject);
-        Destroy(gameObject);
+        if (resultObject != null)
+        {
+            isMerging = true;
+            otherMergeScript.isMerging = true;
+
+            // Calculer la position dans le Rack
+            Vector3 spawnPosition = rackTransform != null ? rackTransform.position :
+                (transform.position + collision.transform.position) / 2;
+
+            // Instancier l'objet
+            GameObject newObject = Instantiate(resultObject, spawnPosition, Quaternion.identity);
+
+            // S'assurer que le nouvel objet a tous les composants nécessaires
+            if (!newObject.GetComponent<MergeObjects>())
+            {
+                // Ajouter le script MergeObjects s'il n'existe pas
+                MergeObjects newMergeScript = newObject.AddComponent<MergeObjects>();
+                // Copier les règles de fusion
+                newMergeScript.mergeRules = this.mergeRules;
+                // Référencer le même rack
+                newMergeScript.rackTransform = this.rackTransform;
+                // Référencer le même MissionText
+                newMergeScript.missionText = this.missionText;
+            }
+
+            // Ajouter un Rigidbody si nécessaire
+            if (!newObject.GetComponent<Rigidbody>())
+            {
+                Rigidbody rb = newObject.AddComponent<Rigidbody>();
+                rb.useGravity = true;
+                rb.isKinematic = false;
+            }
+
+            // Parenter l'objet au Rack
+            if (rackTransform != null)
+            {
+                newObject.transform.SetParent(rackTransform);
+
+                // Organiser les objets dans le Rack
+                ArrangeObjectsInRack();
+            }
+
+            // Incrémenter le compteur de fusion
+            fusionCount++;
+            Debug.Log($"Fusion effectuée ! Total : {fusionCount}/{requiredFusions}");
+
+            // Mettre à jour le texte si nécessaire
+            if (missionText != null)
+            {
+                missionText.UpdateFusionCount(fusionCount, requiredFusions);
+            }
+
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
+        }
+    }
+
+    private void ArrangeObjectsInRack()
+    {
+        if (rackTransform == null) return;
+
+        // Configuration de l'arrangement
+        float spacing = 1.0f;  // Réduire l'espacement entre les objets
+        float startOffset = 0f; // Offset de départ pour centrer les objets
+        float heightOffset = 1f; // Hauteur des objets par rapport au rack
+
+        // Récupérer tous les enfants du Rack
+        int childCount = rackTransform.childCount;
+
+        // Calculer l'offset de départ pour centrer les objets
+        startOffset = -(childCount - 1) * spacing / 2f;
+
+        // Arranger chaque objet
+        for (int i = 0; i < childCount; i++)
+        {
+            Transform child = rackTransform.GetChild(i);
+
+            // Calculer la nouvelle position
+            Vector3 newPosition = rackTransform.position + new Vector3(startOffset + i * spacing, heightOffset, 0f);
+            child.position = newPosition;
+        }
     }
 
     private GameObject GetMergedObject(string tag1, string tag2)
@@ -99,17 +192,14 @@ public class MergeObjects : MonoBehaviour
                 Debug.Log($"Règle de fusion trouvée : {rule.ruleName}");
                 Debug.Log($"Tags : {rule.tag1} et {rule.tag2}");
                 Debug.Log($"Objet résultant : {rule.resultPrefab.name}");
-                // Vérifier si le prefab résultant est actif
+
+                // Vérifier uniquement si le prefab est null
                 if (rule.resultPrefab == null)
                 {
                     Debug.LogError($"Le prefab résultant de la règle {rule.ruleName} est null");
                     return null;
                 }
-                if (!rule.resultPrefab.activeInHierarchy)
-                {
-                    Debug.LogError($"Le prefab résultant de la règle {rule.ruleName} n'est pas actif");
-                    return null;
-                }
+
                 return rule.resultPrefab;
             }
         }
