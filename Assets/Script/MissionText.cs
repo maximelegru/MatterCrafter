@@ -23,7 +23,9 @@ public class MissionText : MonoBehaviour
     private Dictionary<string, bool> questStatus = new Dictionary<string, bool>() {
         { "Fusion", false },
         { "Montagne", false },
-        { "Pluie", false }
+        { "Pluie", false },
+        { "Tutoriel", false },  // Ajouter le statut pour le tutoriel
+        { "Fiole", false }    // Ajouter le statut pour la fiole
     };
 
     void Start()
@@ -152,5 +154,92 @@ public class MissionText : MonoBehaviour
                 IncrementQuestCounter();
             }
         }
+    }
+
+    // Nouvelle méthode pour vérifier la carte du tutoriel
+    public void CheckTutorialCard()
+    {
+        Debug.Log("=== VÉRIFICATION CARTE TUTORIEL 5 ===");
+
+        // Rechercher la carte 5 spécifiquement
+        GameObject tutorialCard = GameObject.FindGameObjectWithTag("TutorialCard5");
+        GameObject questText = GameObject.FindGameObjectWithTag("QuestTutorial");
+
+        if (tutorialCard != null)
+        {
+            Debug.Log($"Carte 5 trouvée - État actif: {tutorialCard.activeInHierarchy}");
+
+            // Vérifier si c'est la carte active
+            if (tutorialCard.activeInHierarchy && !questStatus["Tutoriel"])
+            {
+                Debug.Log("La carte 5 est actuellement affichée!");
+
+                if (questText != null)
+                {
+                    TMP_Text tutorialText = questText.GetComponent<TMP_Text>();
+                    if (tutorialText != null)
+                    {
+                        tutorialText.text = "<s>- Lire le tutoriel</s>";
+                        questStatus["Tutoriel"] = true;
+                        IncrementQuestCounter();
+                        Debug.Log("=== QUÊTE TUTORIEL COMPLÉTÉE ===");
+                    }
+                }
+            }
+        }
+    }
+
+    public void CheckWaterBottleExistence()
+    {
+        Debug.Log("=== DÉBUT VÉRIFICATION FIOLE D'EAU ===");
+
+        // Rechercher la fiole d'eau et le texte de la quête
+        GameObject waterBottle = GameObject.FindGameObjectWithTag("FioleEau");
+        Debug.Log($"Fiole d'eau trouvée ? {waterBottle != null}");
+        if (waterBottle != null)
+        {
+            Debug.Log($"Nom de l'objet fiole : {waterBottle.name}");
+        }
+
+        GameObject questText = GameObject.FindGameObjectWithTag("QuestFiole");
+        Debug.Log($"Texte de quête trouvé ? {questText != null}");
+        if (questText != null)
+        {
+            Debug.Log($"Nom du texte de quête : {questText.name}");
+        }
+
+        Debug.Log($"État actuel de la quête Fiole : {questStatus["Fiole"]}");
+
+        if (questText != null && !questStatus["Fiole"])
+        {
+            TMP_Text fioleText = questText.GetComponent<TMP_Text>();
+            Debug.Log($"Composant TMP_Text trouvé ? {fioleText != null}");
+
+            if (waterBottle != null)
+            {
+                Debug.Log("Conditions remplies pour compléter la quête!");
+                fioleText.text = "<s>- Créer une fiole d'eau</s>";
+                questStatus["Fiole"] = true;
+                IncrementQuestCounter();
+                Debug.Log("=== QUÊTE FIOLE COMPLÉTÉE ===");
+            }
+            else
+            {
+                Debug.Log("La fiole d'eau n'est pas encore créée");
+            }
+        }
+        else
+        {
+            if (questStatus["Fiole"])
+            {
+                Debug.Log("La quête est déjà complétée");
+            }
+            else
+            {
+                Debug.Log("Le texte de la quête n'est pas trouvé");
+            }
+        }
+
+        Debug.Log("=== FIN VÉRIFICATION FIOLE D'EAU ===");
     }
 }

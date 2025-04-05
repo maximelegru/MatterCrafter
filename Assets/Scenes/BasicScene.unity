@@ -535,6 +535,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200033
@@ -588,6 +592,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 34130358}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 34130363}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &34130356 stripped
 Transform:
@@ -769,6 +776,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &34130363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34130357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &35308639
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1543,6 +1572,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900009
@@ -1596,6 +1629,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 60764582}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 60764587}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &60764580 stripped
 Transform:
@@ -1777,6 +1813,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &60764587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 60764581}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &68911811
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1865,6 +1923,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -3257,6 +3319,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200041
@@ -3310,6 +3376,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 104864432}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 104864437}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &104864430 stripped
 Transform:
@@ -3491,6 +3560,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &104864437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 104864431}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &110216978 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3485773276523611762, guid: ddfc1292959bce64f8c5c758157712f1, type: 3}
@@ -3530,6 +3621,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (33)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3584,6 +3679,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 111577545}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 111577550}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &111577543 stripped
 Transform:
@@ -3765,6 +3863,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &111577550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111577544}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &112442094
 GameObject:
   m_ObjectHideFlags: 0
@@ -5644,6 +5764,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900015
@@ -5697,6 +5821,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 188614835}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 188614840}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &188614833 stripped
 Transform:
@@ -5878,6 +6005,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &188614840
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 188614834}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &189516014
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7286,7 +7435,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
   m_AnchoredPosition: {x: 0, y: -24}
-  m_SizeDelta: {x: 98, y: 8}
+  m_SizeDelta: {x: 68, y: 8}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &280722013
 MonoBehaviour:
@@ -8045,7 +8194,7 @@ MonoBehaviour:
   m_linkedTextComponent: {fileID: 0}
   parentLinkedComponent: {fileID: 0}
   m_enableKerning: 1
-  m_ActiveFontFeatures: 00000000
+  m_ActiveFontFeatures: 6e72656b
   m_enableExtraPadding: 0
   checkPaddingRequired: 0
   m_isRichText: 1
@@ -8518,9 +8667,10 @@ GameObject:
   - component: {fileID: 350835203}
   - component: {fileID: 350835205}
   - component: {fileID: 350835204}
+  - component: {fileID: 350835206}
   m_Layer: 0
   m_Name: Text (TMP) (6)
-  m_TagString: Untagged
+  m_TagString: QuestTutorial
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -8541,7 +8691,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5376, y: 0.034}
+  m_AnchoredPosition: {x: 0.521, y: -0.025}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &350835204
@@ -8685,6 +8835,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &350835206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 350835202}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c020aa1b2648e486c8fbf99d6362536a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCounterText: {fileID: 0}
+  missions:
+  - missionDescription: Lire le Tutoriel
+    requiredObject: QuestTutorial
+    isCompleted: 0
 --- !u!1 &351510617 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 44fed6aff454809469effaac1a0b86ed, type: 3}
@@ -8971,7 +9138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5376, y: -0.202}
+  m_AnchoredPosition: {x: 0.525, y: -0.278}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &368357795
@@ -9213,6 +9380,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -9804,6 +9975,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200022
@@ -9857,6 +10032,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 414240433}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 414240438}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &414240431 stripped
 Transform:
@@ -10038,6 +10216,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &414240438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 414240432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &415163413 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4798061275001716, guid: be4105263a3576a4a9d8bb22a5f5ca29, type: 3}
@@ -10244,6 +10444,10 @@ PrefabInstance:
     - target: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Aperture
       value: 22.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1767192439, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: field of view
@@ -10945,6 +11149,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.092000306
@@ -10998,6 +11206,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 483631420}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 483631425}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &483631418 stripped
 Transform:
@@ -11179,6 +11390,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &483631425
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 483631419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &483897961
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11789,6 +12022,10 @@ PrefabInstance:
       value: Flask_05 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -11865,6 +12102,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2490002
@@ -11918,6 +12159,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 520529381}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 520529386}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &520529379 stripped
 Transform:
@@ -12099,6 +12343,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &520529386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 520529380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &524568711
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12871,7 +13137,7 @@ GameObject:
   - component: {fileID: 554272233}
   m_Layer: 5
   m_Name: Card 5
-  m_TagString: Untagged
+  m_TagString: TutorialCard5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12976,6 +13242,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (32)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900006
@@ -13029,6 +13299,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 565439887}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 565439892}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &565439885 stripped
 Transform:
@@ -13210,6 +13483,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &565439892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565439886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &566228434
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13307,6 +13602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09100006
@@ -13360,6 +13659,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 570784340}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 570784345}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &570784338 stripped
 Transform:
@@ -13541,6 +13843,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &570784345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 570784339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &570857958
 GameObject:
   m_ObjectHideFlags: 0
@@ -13707,6 +14031,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -14437,6 +14765,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -15964,6 +16296,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200034
@@ -16017,6 +16353,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 662701659}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 662701664}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &662701657 stripped
 Transform:
@@ -16198,6 +16537,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &662701664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662701658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &666243582
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16555,6 +16916,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09100008
@@ -16608,6 +16973,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 679456936}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 679456941}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &679456934 stripped
 Transform:
@@ -16789,6 +17157,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &679456941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 679456935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &685042493 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4649372153920182415, guid: 964d019e82327ae41878ec0410f5d5e0, type: 3}
@@ -17178,6 +17568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2490002
@@ -17231,6 +17625,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 722233067}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 722233072}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &722233065 stripped
 Transform:
@@ -17412,6 +17809,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &722233072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 722233066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &724831423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4798061275001716, guid: be4105263a3576a4a9d8bb22a5f5ca29, type: 3}
@@ -18207,7 +18626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5378, y: -0.014}
+  m_AnchoredPosition: {x: 0.525, y: -0.08999998}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &784574207
@@ -18868,6 +19287,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200029
@@ -18921,6 +19344,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 830127174}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 830127179}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &830127172 stripped
 Transform:
@@ -19102,6 +19528,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &830127179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 830127173}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &830979190 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 663bf986ccc8edf4d9e5e9f3bfea7cea, type: 3}
@@ -19188,9 +19636,10 @@ GameObject:
   - component: {fileID: 837539267}
   - component: {fileID: 837539269}
   - component: {fileID: 837539268}
+  - component: {fileID: 837539270}
   m_Layer: 0
   m_Name: Text (TMP) (5)
-  m_TagString: Untagged
+  m_TagString: QuestFiole
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -19211,7 +19660,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5376, y: -0.245}
+  m_AnchoredPosition: {x: 0.525, y: -0.32099998}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &837539268
@@ -19355,6 +19804,23 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &837539270
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 837539266}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c020aa1b2648e486c8fbf99d6362536a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  questCounterText: {fileID: 0}
+  missions:
+  - missionDescription: Remplir une fiole avec de l'eau
+    requiredObject: QuestFiole
+    isCompleted: 0
 --- !u!4 &838276013 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: fcb5eb169ed525d47b77a0dc026351d4, type: 3}
@@ -19665,6 +20131,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09099994
@@ -19718,6 +20188,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 850084254}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 850084259}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &850084252 stripped
 Transform:
@@ -19899,6 +20372,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &850084259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 850084253}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &852438656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 44fed6aff454809469effaac1a0b86ed, type: 3}
@@ -22350,6 +22845,10 @@ PrefabInstance:
       value: Flask_05 (1)
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -22898,6 +23397,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09100002
@@ -22951,6 +23454,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 994677814}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 994677819}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &994677812 stripped
 Transform:
@@ -23132,6 +23638,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &994677819
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 994677813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &997733004
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24497,6 +25025,10 @@ PrefabInstance:
       value: Flask_05
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 0
       objectReference: {fileID: 0}
@@ -25681,6 +26213,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900001
@@ -25734,6 +26270,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1109890403}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1109890408}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1109890401 stripped
 Transform:
@@ -25915,6 +26454,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1109890408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1109890402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &1112580435
 GameObject:
   m_ObjectHideFlags: 0
@@ -26377,6 +26938,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900001
@@ -26430,6 +26995,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1140600402}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1140600407}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1140600400 stripped
 Transform:
@@ -26611,6 +27179,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1140600407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1140600401}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &1142411763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4798061275001716, guid: be4105263a3576a4a9d8bb22a5f5ca29, type: 3}
@@ -27136,6 +27726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09099994
@@ -27189,6 +27783,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1169468693}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1169468698}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1169468691 stripped
 Transform:
@@ -27370,6 +27967,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1169468698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1169468692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &1173646151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -1539866098377721523, guid: 663bf986ccc8edf4d9e5e9f3bfea7cea, type: 3}
@@ -29617,6 +30236,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200022
@@ -29670,6 +30293,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1275113736}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1275113741}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1275113734 stripped
 Transform:
@@ -29851,6 +30477,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1275113741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275113735}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &1283658944
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29862,6 +30510,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -30467,6 +31119,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200041
@@ -30520,6 +31176,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1320359854}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1320359859}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1320359852 stripped
 Transform:
@@ -30701,6 +31360,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1320359859
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1320359853}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &1321749119
 GameObject:
   m_ObjectHideFlags: 0
@@ -30736,7 +31417,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5376, y: -0.124}
+  m_AnchoredPosition: {x: 0.525, y: -0.19999997}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1321749121
@@ -31442,6 +32123,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900013
@@ -31495,6 +32180,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1329035002}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1329035007}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1329035000 stripped
 Transform:
@@ -31676,6 +32364,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1329035007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329035001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &1337011102
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -31904,6 +32614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.092000365
@@ -31957,6 +32671,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1342996660}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1342996665}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1342996658 stripped
 Transform:
@@ -32138,6 +32855,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1342996665
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1342996659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &1343164182 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 44fed6aff454809469effaac1a0b86ed, type: 3}
@@ -32413,7 +33152,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5381, y: -0.068}
+  m_AnchoredPosition: {x: 0.525, y: -0.14399998}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1365425779
@@ -33189,6 +33928,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -37042,6 +37785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200022
@@ -37095,6 +37842,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1602113357}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1602113362}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1602113355 stripped
 Transform:
@@ -37276,6 +38026,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1602113362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602113356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &1602294246
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -38276,6 +39048,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -39558,6 +40334,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09099998
@@ -39611,6 +40391,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1731774731}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1731774736}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1731774729 stripped
 Transform:
@@ -39792,6 +40575,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1731774736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1731774730}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &1733876643
 GameObject:
   m_ObjectHideFlags: 0
@@ -40268,6 +41073,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -41532,6 +42341,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.2490002
@@ -41585,6 +42398,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1802692670}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1802692675}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1802692668 stripped
 Transform:
@@ -41766,6 +42582,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1802692675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1802692669}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &1803148197
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -41844,6 +42682,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09099994
@@ -41897,6 +42739,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1805640563}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1805640568}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1805640561 stripped
 Transform:
@@ -42078,6 +42923,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1805640568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1805640562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &1810319224 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8953444846200729156, guid: 0e026c030e3c02240a8bf69002a807b2, type: 3}
@@ -42138,6 +43005,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -42917,6 +43788,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.091000006
@@ -42970,6 +43845,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1852236138}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1852236143}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1852236136 stripped
 Transform:
@@ -43151,6 +44029,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1852236143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852236137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &1852479227
 GameObject:
   m_ObjectHideFlags: 0
@@ -43186,7 +44086,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.5376, y: -0.327}
+  m_AnchoredPosition: {x: 0.521, y: 0.031}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1852479229
@@ -43274,7 +44174,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 3.7673545, y: 0, z: 11.381137, w: 3.786649}
+  m_margin: {x: 3.7673545, y: 0, z: 11.446743, w: 4.3186064}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   _SortingLayer: 0
@@ -44769,6 +45669,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (28)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900013
@@ -44822,6 +45726,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1901473043}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1901473048}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &1901473041 stripped
 Transform:
@@ -45003,6 +45910,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &1901473048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901473042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &1903908648
 GameObject:
   m_ObjectHideFlags: 0
@@ -45374,6 +46303,10 @@ MonoBehaviour:
     tag1: DuplicateAir
     tag2: DuplicateEau
     resultPrefab: {fileID: 7443589032020335490, guid: e63ca436105f1453a8b2d085aee78c36, type: 3}
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
   missionText: {fileID: 784574209}
 --- !u!135 &1909389638
 SphereCollider:
@@ -47700,6 +48633,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09200027
@@ -47753,6 +48690,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2017178331}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2017178336}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &2017178329 stripped
 Transform:
@@ -47934,6 +48874,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2017178336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2017178330}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &2018835155 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4798061275001716, guid: be4105263a3576a4a9d8bb22a5f5ca29, type: 3}
@@ -48273,6 +49235,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.091000125
@@ -48326,6 +49292,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2025064031}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2025064036}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &2025064029 stripped
 Transform:
@@ -48507,6 +49476,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2025064036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2025064030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!4 &2026542966 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2275721571885089005, guid: acdb90624a404aa438447006f1026065, type: 3}
@@ -48974,6 +49965,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.091000125
@@ -49027,6 +50022,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2047745991}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2047745996}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &2047745989 stripped
 Transform:
@@ -49208,6 +50206,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2047745996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047745990}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &2047805159
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49219,6 +50239,10 @@ PrefabInstance:
     - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_Name
       value: Flask_05 (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
       objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49273,6 +50297,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2047805162}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2047805167}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &2047805160 stripped
 Transform:
@@ -49454,6 +50481,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2047805167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2047805161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1001 &2050010547
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -49623,6 +50672,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.09100004
@@ -49676,6 +50729,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2052787886}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2052787891}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &2052787884 stripped
 Transform:
@@ -49857,6 +50913,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2052787891
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052787885}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &2053582971 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -927199367670048503, guid: 286e43d1c643e32429628b056004c0ef, type: 3}
@@ -50837,6 +51915,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (30)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.24900009
@@ -50890,6 +51972,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2104309800}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2104309805}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &2104309798 stripped
 Transform:
@@ -51071,6 +52156,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2104309805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2104309799}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &2106449391 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 887d8e7178c222845a83551a7df89107, type: 3}
@@ -51536,6 +52643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Flask_05 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      propertyPath: m_TagString
+      value: Fiole
+      objectReference: {fileID: 0}
     - target: {fileID: 4406544723037318, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.091000125
@@ -51589,6 +52700,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2124934808}
+    - targetCorrespondingSourceObject: {fileID: 1822811081740728, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2124934813}
   m_SourcePrefab: {fileID: 100100000, guid: 9d79a38f83fd64d7890b96cd421bf2a8, type: 3}
 --- !u!4 &2124934806 stripped
 Transform:
@@ -51770,6 +52884,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &2124934813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2124934807}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: FioleEau
+    tag1: Fiole
+    tag2: DuplicateEau
+    resultPrefab: {fileID: 7067236143361613823, guid: c4b4924c450e440cc919397c1be5421f, type: 3}
+  missionText: {fileID: 0}
 --- !u!1 &2125214515
 GameObject:
   m_ObjectHideFlags: 0

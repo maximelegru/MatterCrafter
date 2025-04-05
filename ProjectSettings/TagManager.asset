@@ -36,6 +36,13 @@ TagManager:
   - QuestMontagne
   - QuestPluie
   - QuestCounter
+  - Tutoriel
+  - TutorialCard5
+  - QuestTutorial
+  - Fiole
+  - FioleEau
+  - DuplicateFioleEau
+  - QuestFiole
   layers:
   - Default
   - TransparentFX

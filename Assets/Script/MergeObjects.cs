@@ -224,6 +224,10 @@ public class MergeObjects : MonoBehaviour
             {
                 missionText.CheckRainObjectExistence();
             }
+            else if (newObject.CompareTag("FioleEau"))
+            {
+                missionText.CheckWaterBottleExistence();
+            }
         }
     }
 }
