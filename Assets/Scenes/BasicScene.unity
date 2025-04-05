@@ -9127,6 +9127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c020aa1b2648e486c8fbf99d6362536a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questCounterText: {fileID: 0}
   missions:
   - missionDescription: Faire de la pluie
     requiredObject: QuestPluie
@@ -18359,6 +18360,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c020aa1b2648e486c8fbf99d6362536a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questCounterText: {fileID: 0}
   missions:
   - missionDescription: Faire une fusion
     requiredObject: QuestFusion
@@ -30885,6 +30887,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c020aa1b2648e486c8fbf99d6362536a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  questCounterText: {fileID: 0}
   missions:
   - missionDescription: Faire une montagne
     requiredObject: QuestMontagne
@@ -45985,7 +45988,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3591373894728721062, guid: 8b2ed08f82f4cea41907e2cf2f8938c5, type: 3}
       propertyPath: m_Center.y
-      value: 2.052214
+      value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 5944654773601380002, guid: 8b2ed08f82f4cea41907e2cf2f8938c5, type: 3}
       propertyPath: m_Name
@@ -46050,6 +46053,10 @@ PrefabInstance:
     - target: {fileID: 7853184493689706369, guid: 8b2ed08f82f4cea41907e2cf2f8938c5, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 2147483647
+      objectReference: {fileID: 0}
+    - target: {fileID: 7914673570875034053, guid: 8b2ed08f82f4cea41907e2cf2f8938c5, type: 3}
+      propertyPath: m_Size.y
+      value: 2.73
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
