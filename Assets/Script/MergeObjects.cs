@@ -159,6 +159,15 @@ public class MergeObjects : MonoBehaviour
                 }
             }
 
+            // Après une fusion réussie, vérifier si l'objet créé est de la pluie
+            if (newObject.CompareTag("Pluie"))
+            {
+                if (missionText != null)
+                {
+                    missionText.CheckRainObjectExistence();
+                }
+            }
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }

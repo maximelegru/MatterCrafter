@@ -13,9 +13,18 @@ public struct MissionRequirement  // Utiliser struct au lieu de class
 public class MissionText : MonoBehaviour
 {
     private TMP_Text missionText;  // Changement ici pour utiliser TMP_Text
-    private bool isCompleted = false; // Ajout de la variable isCompleted
+    private static int questsCompleted = 0; // Compteur de quêtes complétées
+    private static int totalQuests = 3; // Nombre total de quêtes (fusion, montagne, pluie)
+    [SerializeField] private GameObject questCounterText; // Référence au texte du compteur
 
     [SerializeField] private List<MissionRequirement> missions = new List<MissionRequirement>();
+
+    // Au lieu d'un seul booléen isCompleted, utilisons un dictionnaire pour suivre l'état de chaque quête
+    private Dictionary<string, bool> questStatus = new Dictionary<string, bool>() {
+        { "Fusion", false },
+        { "Montagne", false },
+        { "Pluie", false }
+    };
 
     void Start()
     {
@@ -69,72 +78,79 @@ public class MissionText : MonoBehaviour
         }
     }
 
+    private void IncrementQuestCounter()
+    {
+        questsCompleted++;
+        UpdateQuestCounter();
+    }
+
+    private void UpdateQuestCounter()
+    {
+        // Trouver le texte du compteur
+        GameObject counter = GameObject.FindGameObjectWithTag("QuestCounter");
+        if (counter != null)
+        {
+            TMP_Text counterText = counter.GetComponent<TMP_Text>();
+            if (counterText != null)
+            {
+                string text = $"Quêtes : {questsCompleted}/{totalQuests}";
+
+                // Ajouter la couleur verte si toutes les quêtes sont complétées
+                if (questsCompleted >= totalQuests)
+                {
+                    text = $"<color=#00FF00>{text}</color>";
+                }
+
+                counterText.text = text;
+                Debug.Log($"Compteur mis à jour : {text}");
+            }
+        }
+    }
+
     public void UpdateFusionCount(int currentCount, int required)
     {
-        if (missionText != null)
+        if (missionText != null && !questStatus["Fusion"])
         {
-            // Configuration du style de base
-            missionText.fontSize = 5.4f;  // Taille de police par défaut
-            // Vérification de la complétion
-
-            string missionTextContent = $"- Faire une fusion";
             if (currentCount >= required)
             {
-                isCompleted = true;
-                Debug.Log("Mission complétée !");
-                const string STRIKE_START = "<s>";
-                const string STRIKE_END = "</s>";
-                missionTextContent = $"{STRIKE_START}{missionTextContent}{STRIKE_END}";
-                Debug.Log($"Mise à jour du texte avec barré : {missionTextContent}");
+                missionText.text = $"<s>- Faire une fusion</s>";
+                questStatus["Fusion"] = true;
+                IncrementQuestCounter();
             }
-
-            missionText.text = missionTextContent;
-            Debug.Log($"Mise à jour du texte : {missionTextContent}");
-        }
-        else
-        {
-            Debug.LogError("Le composant TMP_Text n'est pas assigné !");
         }
     }
 
     public void CheckObjectExistence()
     {
-        // Chercher spécifiquement le TextMeshPro avec le tag QuestMontagne
-        GameObject questMontagne = GameObject.FindGameObjectWithTag("QuestMontagne");
+        GameObject mountain = GameObject.FindGameObjectWithTag("Montagne");
+        GameObject questText = GameObject.FindGameObjectWithTag("QuestMontagne");
 
-        if (questMontagne != null)
+        if (questText != null && !questStatus["Montagne"])
         {
-            TMP_Text montagneText = questMontagne.GetComponent<TMP_Text>();
-            if (montagneText != null)
+            TMP_Text montagneText = questText.GetComponent<TMP_Text>();
+            if (mountain != null)
             {
-                Debug.Log($"Texte de quête montagne trouvé : {questMontagne.name}");
-
-                // Rechercher un objet avec le tag Montagne
-                GameObject mountain = GameObject.FindGameObjectWithTag("Montagne");
-                string questText = "- Créer une montagne";
-
-                if (mountain != null)
-                {
-                    Debug.Log("Une montagne a été trouvée dans la scène!");
-                    const string STRIKE_START = "<s>";
-                    const string STRIKE_END = "</s>";
-                    questText = $"{STRIKE_START}{questText}{STRIKE_END}";
-                    isCompleted = true;
-                }
-                else
-                {
-                    Debug.Log("Aucune montagne trouvée dans la scène");
-                    isCompleted = false;
-                }
-
-                // Mettre à jour le texte de la quête montagne
-                montagneText.text = questText;
-                Debug.Log($"Mise à jour du texte de la quête montagne : {questText}");
+                montagneText.text = "<s>- Créer une montagne</s>";
+                questStatus["Montagne"] = true;
+                IncrementQuestCounter();
             }
         }
-        else
+    }
+
+    public void CheckRainObjectExistence()
+    {
+        GameObject rain = GameObject.FindGameObjectWithTag("Pluie");
+        GameObject questText = GameObject.FindGameObjectWithTag("QuestPluie");
+
+        if (questText != null && !questStatus["Pluie"])
         {
-            Debug.LogWarning("Aucun GameObject avec le tag 'QuestMontagne' trouvé");
+            TMP_Text pluieText = questText.GetComponent<TMP_Text>();
+            if (rain != null)
+            {
+                pluieText.text = "<s>- Créer de la pluie</s>";
+                questStatus["Pluie"] = true;
+                IncrementQuestCounter();
+            }
         }
     }
 }
