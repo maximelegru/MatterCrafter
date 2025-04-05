@@ -2,18 +2,18 @@ using UnityEngine;
 using TMPro;
 using System.Collections.Generic;
 
+[System.Serializable]  // Important pour la sérialisation dans Unity
+public struct MissionRequirement  // Utiliser struct au lieu de class
+{
+    [SerializeField] public string missionDescription;  // Ajouter [SerializeField]
+    [SerializeField] public string requiredObject;      // Ajouter [SerializeField]
+    [SerializeField] public bool isCompleted;           // Ajouter [SerializeField]
+}
+
 public class MissionText : MonoBehaviour
 {
     private TMP_Text missionText;  // Changement ici pour utiliser TMP_Text
     private bool isCompleted = false; // Ajout de la variable isCompleted
-
-    [System.Serializable]
-    public class MissionRequirement
-    {
-        public string missionDescription;
-        public string requiredObject;
-        public bool isCompleted;
-    }
 
     [SerializeField] private List<MissionRequirement> missions = new List<MissionRequirement>();
 
@@ -44,18 +44,23 @@ public class MissionText : MonoBehaviour
     {
         Debug.Log($"Vérification de mission pour l'objet avec tag : {createdObjectTag}");
 
-        foreach (var mission in missions)
+        for (int i = 0; i < missions.Count; i++)
         {
+            var mission = missions[i];
             Debug.Log($"Comparaison avec mission : {mission.missionDescription} (tag requis : {mission.requiredObject})");
 
             if (mission.requiredObject == createdObjectTag)
             {
-                mission.isCompleted = true;
+                // Créer une copie modifiée de la mission
+                var updatedMission = missions[i];
+                updatedMission.isCompleted = true;
+                missions[i] = updatedMission;  // Réassigner la mission modifiée
+
                 Debug.Log($"Mission complétée : {mission.missionDescription}");
-                // Optionnel : Mettre à jour le texte de la mission
+
+                // Mettre à jour le texte de la mission
                 missionText.text = $"Mission : {mission.missionDescription} - Complétée !";
-                // Vous pouvez également ajouter une couleur ou un style différent pour le texte complété
-                missionText.color = Color.green;  // Change la couleur du texte en vert
+                missionText.color = Color.green;
             }
             else
             {
@@ -89,6 +94,47 @@ public class MissionText : MonoBehaviour
         else
         {
             Debug.LogError("Le composant TMP_Text n'est pas assigné !");
+        }
+    }
+
+    public void CheckObjectExistence()
+    {
+        // Chercher spécifiquement le TextMeshPro avec le tag QuestMontagne
+        GameObject questMontagne = GameObject.FindGameObjectWithTag("QuestMontagne");
+
+        if (questMontagne != null)
+        {
+            TMP_Text montagneText = questMontagne.GetComponent<TMP_Text>();
+            if (montagneText != null)
+            {
+                Debug.Log($"Texte de quête montagne trouvé : {questMontagne.name}");
+
+                // Rechercher un objet avec le tag Montagne
+                GameObject mountain = GameObject.FindGameObjectWithTag("Montagne");
+                string questText = "- Créer une montagne";
+
+                if (mountain != null)
+                {
+                    Debug.Log("Une montagne a été trouvée dans la scène!");
+                    const string STRIKE_START = "<s>";
+                    const string STRIKE_END = "</s>";
+                    questText = $"{STRIKE_START}{questText}{STRIKE_END}";
+                    isCompleted = true;
+                }
+                else
+                {
+                    Debug.Log("Aucune montagne trouvée dans la scène");
+                    isCompleted = false;
+                }
+
+                // Mettre à jour le texte de la quête montagne
+                montagneText.text = questText;
+                Debug.Log($"Mise à jour du texte de la quête montagne : {questText}");
+            }
+        }
+        else
+        {
+            Debug.LogWarning("Aucun GameObject avec le tag 'QuestMontagne' trouvé");
         }
     }
 }

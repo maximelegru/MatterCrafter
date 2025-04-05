@@ -150,6 +150,15 @@ public class MergeObjects : MonoBehaviour
                 missionText.UpdateFusionCount(fusionCount, requiredFusions);
             }
 
+            // Après une fusion réussie, vérifier si l'objet créé est une montagne
+            if (newObject.CompareTag("Montagne"))
+            {
+                if (missionText != null)
+                {
+                    missionText.CheckObjectExistence();
+                }
+            }
+
             Destroy(collision.gameObject);
             Destroy(gameObject);
         }
