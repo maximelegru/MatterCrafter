@@ -1,5 +1,12 @@
 fileFormatVersion: 2
 guid: f86357ae73aafed42b53ebfd56ed5685
+AssetOrigin:
+  serializedVersion: 1
+  productId: 303168
+  packageName: Casual Light Pack
+  packageVersion: 1.0
+  assetPath: Assets/Gogo Casual Pack/Gogo Casual Free Modular Pack/FBX/Modular_Simple_Column_01_01.fbx
+  uploadId: 722476
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
@@ -16,8 +23,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 0
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -75,8 +80,8 @@ ModelImporter:
     tangentImportMode: 3
     normalCalculationMode: 4
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
-    blendShapeNormalImportMode: 0
-    normalSmoothingSource: 1
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
   referencedClips: []
   importAnimation: 1
   humanDescription:
@@ -101,16 +106,9 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 0
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
-  importBlendShapeDeformPercent: 1
+  importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 303168
-  packageName: Casual Light Pack
-  packageVersion: 1.0
-  assetPath: Assets/Gogo Casual Pack/Gogo Casual Free Modular Pack/FBX/Modular_Simple_Column_01_01.fbx
-  uploadId: 722476
