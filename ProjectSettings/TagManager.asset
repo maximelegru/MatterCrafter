@@ -43,6 +43,7 @@ TagManager:
   - FioleEau
   - DuplicateFioleEau
   - QuestFiole
+  - DuplicateMontagne
   layers:
   - Default
   - TransparentFX
