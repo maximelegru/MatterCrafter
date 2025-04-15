@@ -44,6 +44,41 @@ TagManager:
   - DuplicateFioleEau
   - QuestFiole
   - DuplicateMontagne
+  - DuplicateLave
+  - Mer
+  - DuplicateMer
+  - Tornade
+  - DuplicateTornade
+  - Volcan
+  - DuplicateVolcan
+  - Orage
+  - DuplicateOrage
+  - "Temp\xEAte"
+  - "DuplicateTemp\xEAte"
+  - Obsidienne
+  - DuplicateObsidienne
+  - VolcanSousMarin
+  - DuplicateVolcanSousMarin
+  - PluieCendre
+  - DuplicatePluieCendre
+  - Eauelec
+  - DuplicateEauelec
+  - Cendre
+  - DuplicateCendre
+  - "Temp\xEAteSable"
+  - "DuplicateTemp\xEAteSable"
+  - Pierre
+  - DuplicatePierre
+  - Brique
+  - DuplicateBrique
+  - Sable
+  - DuplicateSable
+  - Maison
+  - DuplicateMaison
+  - Verre
+  - DuplicateVerre
+  - PierreVolcan
+  - DuplicatePierreVolcan
   layers:
   - Default
   - TransparentFX
