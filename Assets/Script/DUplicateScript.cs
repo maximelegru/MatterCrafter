@@ -55,12 +55,12 @@ public class FusionObject : MonoBehaviour
 
     void Update()
     {
-        // Si l'objet est saisi, on peut forcer sa position au niveau du contrôleur
+        // Si l'objet est saisi, forcer sa position au niveau du contrôleur
         if (isGrabbed && currentInteractor != null)
         {
-            // Cette méthode est optionnelle si la configuration du XRGrabInteractable ne suffit pas
-            // transform.position = currentInteractor.transform.position;
-            // transform.rotation = currentInteractor.transform.rotation;
+            // Forcer la position et rotation pour qu'elles soient identiques au contrôleur
+            transform.position = currentInteractor.transform.position;
+            transform.rotation = currentInteractor.transform.rotation;
         }
     }
 
