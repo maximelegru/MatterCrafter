@@ -9,7 +9,7 @@ public class FusionObject : MonoBehaviour
     private bool canDuplicate = true;
     private float duplicateDelay = 2f;
     private float destroyDelay = 2f;
-    private bool isReleased = fale;
+    private bool isReleased = false;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor currentInteractor;
 
