@@ -19658,6 +19658,7 @@ GameObject:
   - component: {fileID: 881662433}
   - component: {fileID: 881662435}
   - component: {fileID: 881662434}
+  - component: {fileID: 881662436}
   m_Layer: 0
   m_Name: Area Light
   m_TagString: Untagged
@@ -19768,6 +19769,19 @@ Light:
   m_LightUnit: 1
   m_LuxAtDistance: 1
   m_EnableSpotReflector: 1
+--- !u!114 &881662436
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881662432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!4 &890152632 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 349427748676284531, guid: db6546049b07ead45b5904d4dd8c3ca9, type: 3}
@@ -22049,6 +22063,7 @@ GameObject:
   - component: {fileID: 983070436}
   - component: {fileID: 983070435}
   - component: {fileID: 983070442}
+  - component: {fileID: 983070443}
   m_Layer: 0
   m_Name: Sphere (1)
   m_TagString: Feu
@@ -22337,6 +22352,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0309611e04cfb4524b2d56c313ba027c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &983070443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 983070433}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!4 &983380892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 44fed6aff454809469effaac1a0b86ed, type: 3}
@@ -32245,6 +32273,7 @@ GameObject:
   - component: {fileID: 1371675396}
   - component: {fileID: 1371675395}
   - component: {fileID: 1371675401}
+  - component: {fileID: 1371675402}
   m_Layer: 0
   m_Name: Sphere (4)
   m_TagString: Air
@@ -32532,6 +32561,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0309611e04cfb4524b2d56c313ba027c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1371675402
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1371675393}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!1001 &1375870976
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -42654,6 +42696,7 @@ GameObject:
   - component: {fileID: 1865514040}
   - component: {fileID: 1865514039}
   - component: {fileID: 1865514045}
+  - component: {fileID: 1865514046}
   m_Layer: 0
   m_Name: Sphere (3)
   m_TagString: Terre
@@ -42945,6 +42988,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0309611e04cfb4524b2d56c313ba027c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1865514046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865514037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!1 &1868915100 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f86357ae73aafed42b53ebfd56ed5685, type: 3}
@@ -44323,6 +44379,7 @@ GameObject:
   - component: {fileID: 1909389637}
   - component: {fileID: 1909389635}
   - component: {fileID: 1909389641}
+  - component: {fileID: 1909389642}
   m_Layer: 0
   m_Name: Sphere (2)
   m_TagString: Eau
@@ -44615,6 +44672,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0309611e04cfb4524b2d56c313ba027c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1909389642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1909389633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!4 &1913166258 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5201423646680458952, guid: ea0853a3b2545524481b0c984f27afd1, type: 3}
