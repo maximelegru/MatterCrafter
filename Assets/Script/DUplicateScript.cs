@@ -9,7 +9,7 @@ public class FusionObject : MonoBehaviour
     private bool canDuplicate = true;
     private float duplicateDelay = 2f;
     private float destroyDelay = 2f;
-    private bool isReleased = false;
+    private bool isReleased = fale;
     private UnityEngine.XR.Interaction.Toolkit.Interactables.XRGrabInteractable grabInteractable;
     private UnityEngine.XR.Interaction.Toolkit.Interactors.XRBaseInteractor currentInteractor;
 
@@ -55,8 +55,8 @@ public class FusionObject : MonoBehaviour
 
     void Update()
     {
-        // Si l'objet est saisi, forcer sa position au niveau du contrôleur
-        if (isGrabbed && currentInteractor != null)
+        // Si l'objet est saisi et a un tag Duplicate, forcer sa position au niveau du contrôleur
+        if (isGrabbed && currentInteractor != null && gameObject.tag.StartsWith("Duplicate"))
         {
             // Forcer la position et rotation pour qu'elles soient identiques au contrôleur
             transform.position = currentInteractor.transform.position;
