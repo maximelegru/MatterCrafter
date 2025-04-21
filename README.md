@@ -158,7 +158,7 @@
 
   - Quand un objet est laché après l'avoir récupérer, il disparait (fonction DestroyAfterDelay())
 
-  ````csharp
+  ```csharp
    private void OnRelease(SelectExitEventArgs args)
     {
         isGrabbed = false;
@@ -188,7 +188,7 @@
 
   ```csharp
    public int maxInstances = 3;
-  ````
+  ```
 
   - On ne peux pas dupliquer les objets qui ont le tag Duplicate
 
