@@ -154,7 +154,15 @@ MonoBehaviour:
   isMerging: 0
   requiredFusions: 1
   rackTransform: {fileID: 0}
-  mergeRules: []
+  mergeRules:
+  - ruleName: Brique
+    tag1: DuplicatePierre
+    tag2: DuplicateFeu
+    resultPrefab: {fileID: 5218025966510681133, guid: 0de89a0b1f82c4d0183d62107a94fec9, type: 3}
+  - ruleName: PierreVolca
+    tag1: DuplicatePierre
+    tag2: DuplicateVolcan
+    resultPrefab: {fileID: 6345881079017433034, guid: 9d5b485014c944c2489e550c6db3d125, type: 3}
   missionText: {fileID: 0}
 --- !u!54 &1101461888307968618
 Rigidbody:

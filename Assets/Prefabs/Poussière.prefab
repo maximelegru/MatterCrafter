@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2468809035754399702}
   - component: {fileID: 3468166591987850976}
   - component: {fileID: 6657055199053419747}
+  - component: {fileID: 7418748538663521023}
   - component: {fileID: 7934332126731885877}
   - component: {fileID: 5700343599773691201}
   m_Layer: 0
@@ -139,7 +140,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActivated: 0
   isMerging: 0
-  mergeRules: []
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: Sable
+    tag1: "DuplicatePoussi\xE8re"
+    tag2: "DuplicatePoussi\xE8re"
+    resultPrefab: {fileID: 0}
+  missionText: {fileID: 0}
+--- !u!114 &7418748538663521023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4962893894672398342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!54 &7934332126731885877
 Rigidbody:
   m_ObjectHideFlags: 0

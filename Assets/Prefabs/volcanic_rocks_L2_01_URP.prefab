@@ -7945,6 +7945,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6006334693614861680}
+  - component: {fileID: 6782998889710433653}
+  - component: {fileID: 4550416258181293527}
+  - component: {fileID: -1608600777955431903}
   m_Layer: 0
   m_Name: volcanic_rocks_L2_01_URP
   m_TagString: PierreVolcan
@@ -7973,6 +7976,49 @@ Transform:
   - {fileID: 6334922023671517822}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6782998889710433653
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345881079017433034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
+--- !u!114 &4550416258181293527
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345881079017433034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules: []
+  missionText: {fileID: 0}
+--- !u!114 &-1608600777955431903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6345881079017433034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0309611e04cfb4524b2d56c313ba027c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6518641854525245756
 GameObject:
   m_ObjectHideFlags: 0

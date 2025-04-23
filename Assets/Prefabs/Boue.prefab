@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 8475909078495450342}
   - component: {fileID: 6981226106764821461}
   - component: {fileID: 1793460924894731563}
+  - component: {fileID: -237181104538479394}
   m_Layer: 0
   m_Name: Boue
   m_TagString: Boue
@@ -138,7 +139,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActivated: 0
   isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
   mergeRules: []
+  missionText: {fileID: 0}
 --- !u!54 &6981226106764821461
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -288,3 +292,16 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &-237181104538479394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8680718135802396831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3

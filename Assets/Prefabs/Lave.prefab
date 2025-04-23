@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5814532860444276868}
   - component: {fileID: 4908776112846445694}
   - component: {fileID: 3656703341590265691}
+  - component: {fileID: -2878781876985950296}
   m_Layer: 0
   m_Name: Lave
   m_TagString: Lave
@@ -139,7 +140,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActivated: 0
   isMerging: 0
-  mergeRules: []
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: Obsidienne
+    tag1: DuplicateLave
+    tag2: DuplicteEau
+    resultPrefab: {fileID: 8665157054213444935, guid: dfbcfe583a5014bdfa3eb06d1f718a47, type: 3}
+  - ruleName: Pierre
+    tag1: DuplicateEau
+    tag2: DuplicteLave
+    resultPrefab: {fileID: 1867637736130288500, guid: 0826699ccd1fc442995c6b4d0319bd2f, type: 3}
+  - ruleName: Volcan
+    tag1: DuplicateMontagne
+    tag2: DuplicteLave
+    resultPrefab: {fileID: 1867637736130288500, guid: 0826699ccd1fc442995c6b4d0319bd2f, type: 3}
+  missionText: {fileID: 0}
 --- !u!54 &4908776112846445694
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -289,6 +305,19 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &-2878781876985950296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703404037793775074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!1001 &3062579495234097708
 PrefabInstance:
   m_ObjectHideFlags: 0

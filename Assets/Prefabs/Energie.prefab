@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 5919352211584702390}
   - component: {fileID: 9054468099776403331}
   - component: {fileID: 7027147422272080568}
+  - component: {fileID: -1183542998096689694}
   m_Layer: 0
   m_Name: Energie
   m_TagString: Energie
@@ -139,7 +140,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActivated: 0
   isMerging: 0
-  mergeRules: []
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: EauElec
+    tag1: DuplicateEau
+    tag2: DuplicateEnergie
+    resultPrefab: {fileID: 0}
+  - ruleName: Orage
+    tag1: DuplicatePluie
+    tag2: DuplicateEnergie
+    resultPrefab: {fileID: 0}
+  - ruleName: Verre
+    tag1: DuplicateSable
+    tag2: DuplicateEnergie
+    resultPrefab: {fileID: 6551813631810851758, guid: 7a02aac98e38a40a6845bfcd7c9f9e4c, type: 3}
+  missionText: {fileID: 0}
 --- !u!54 &9054468099776403331
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -289,6 +305,19 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &-1183542998096689694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1435943625579400445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!1001 &8593192951265947822
 PrefabInstance:
   m_ObjectHideFlags: 0

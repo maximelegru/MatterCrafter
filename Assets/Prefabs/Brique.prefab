@@ -17,6 +17,9 @@ GameObject:
   - component: {fileID: 4927055159579892324}
   - component: {fileID: 8765004825400850099}
   - component: {fileID: 7487776278250539705}
+  - component: {fileID: -6370304570966758870}
+  - component: {fileID: 3735079538084625337}
+  - component: {fileID: -6894088715370741219}
   m_Layer: 0
   m_Name: Brique
   m_TagString: Brique
@@ -305,3 +308,50 @@ MonoBehaviour:
   m_StartingMultipleGrabTransformers: []
   m_AddDefaultGrabTransformers: 1
   m_FarAttachMode: 0
+--- !u!114 &-6370304570966758870
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218025966510681133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
+--- !u!114 &3735079538084625337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218025966510681133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: Maison
+    tag1: Brique
+    tag2: Brique
+    resultPrefab: {fileID: 0}
+  missionText: {fileID: 0}
+--- !u!114 &-6894088715370741219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5218025966510681133}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0309611e04cfb4524b2d56c313ba027c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

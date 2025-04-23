@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2269379529663244677}
   - component: {fileID: 7548557073898040858}
   - component: {fileID: 4666718809349955412}
+  - component: {fileID: -8004149732381471793}
   - component: {fileID: 5166388864905445662}
   - component: {fileID: 1478939712590551214}
   m_Layer: 0
@@ -139,7 +140,27 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   triggerActivated: 0
   isMerging: 0
-  mergeRules: []
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules:
+  - ruleName: Orage
+    tag1: DuplicatePluie
+    tag2: DuplicateEnergie
+    resultPrefab: {fileID: 0}
+  missionText: {fileID: 0}
+--- !u!114 &-8004149732381471793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7443589032020335490}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
 --- !u!54 &5166388864905445662
 Rigidbody:
   m_ObjectHideFlags: 0

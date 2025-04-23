@@ -102,6 +102,7 @@ GameObject:
   - component: {fileID: 4375803773441994552}
   - component: {fileID: 3276868188446390782}
   - component: {fileID: 6344508058223438671}
+  - component: {fileID: 1601468950999580185}
   m_Layer: 0
   m_Name: FioleEau
   m_TagString: FioleEau
@@ -382,3 +383,16 @@ MonoBehaviour:
     tag2: 
     resultPrefab: {fileID: 0}
   missionText: {fileID: 0}
+--- !u!114 &1601468950999580185
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7067236143361613823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3

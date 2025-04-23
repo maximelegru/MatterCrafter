@@ -9,6 +9,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1865603112017772760}
+  - component: {fileID: 30887833205650046}
+  - component: {fileID: -4720350323014630545}
+  - component: {fileID: 188434315554524023}
   m_Layer: 0
   m_Name: TornadoEfc
   m_TagString: Tornade
@@ -32,6 +35,49 @@ Transform:
   - {fileID: 1476108242290032899}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &30887833205650046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865603112017772757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26a22bf76fdd74a9e87891c050e212df, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxInstances: 3
+--- !u!114 &-4720350323014630545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865603112017772757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 85ea51424d32e4cc69be1c6ce2ee3c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerActivated: 0
+  isMerging: 0
+  requiredFusions: 1
+  rackTransform: {fileID: 0}
+  mergeRules: []
+  missionText: {fileID: 0}
+--- !u!114 &188434315554524023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1865603112017772757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0309611e04cfb4524b2d56c313ba027c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8169408167119270338
 GameObject:
   m_ObjectHideFlags: 0
