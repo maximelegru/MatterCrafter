@@ -44,4 +44,27 @@ public class DeleteDuplicateObject : MonoBehaviour
             }
         }
     }
+
+    void DetectDestroyObJectInBind()
+    {
+        // Cette méthode n'est plus nécessaire car la logique est dans les méthodes OnCollisionEnter et OnTriggerEnter
+    }
+
+    // Détecte les collisions (requiert un Collider)
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("BinDetector") && gameObject.tag.StartsWith("Duplicate"))
+        {
+            Destroy(gameObject);
+        }
+    }
+
+    // Détecte les triggers (requiert un Collider configuré comme Trigger)
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.CompareTag("BinDetector") && gameObject.tag.StartsWith("Duplicate"))
+        {
+            Destroy(gameObject);
+        }
+    }
 }
