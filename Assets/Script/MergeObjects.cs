@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using System;
@@ -135,24 +136,31 @@ public class MergeObjects : MonoBehaviour
         if (rackTransform == null) return;
 
         // Configuration de l'arrangement
-        float spacing = 1.0f;  // Réduire l'espacement entre les objets
-        float startOffset = 0f; // Offset de départ pour centrer les objets
-        float heightOffset = 1f; // Hauteur des objets par rapport au rack
+        float spacing = 1.2f;  // Espacement ajusté entre les objets
+        float startOffset = 0f;
+        float heightOffset = 1f; // Hauteur par rapport au rack
 
-        // Récupérer tous les enfants du Rack
-        int childCount = rackTransform.childCount;
+        // Récupérer tous les objets fusionnés dans le rack
+        List<Transform> rackObjects = new List<Transform>();
+        for (int i = 0; i < rackTransform.childCount; i++)
+        {
+            rackObjects.Add(rackTransform.GetChild(i));
+        }
 
         // Calculer l'offset de départ pour centrer les objets
-        startOffset = -(childCount - 1) * spacing / 2f;
+        int objectCount = rackObjects.Count;
+        startOffset = -(objectCount - 1) * spacing / 2f;
 
-        // Arranger chaque objet
-        for (int i = 0; i < childCount; i++)
+        // Positionner chaque objet
+        for (int i = 0; i < objectCount; i++)
         {
-            Transform child = rackTransform.GetChild(i);
+            Transform child = rackObjects[i];
 
             // Calculer la nouvelle position
             Vector3 newPosition = rackTransform.position + new Vector3(startOffset + i * spacing, heightOffset, 0f);
-            child.position = newPosition;
+
+            // Déplacer progressivement l'objet vers sa position (optionnel)
+            StartCoroutine(MoveObjectSmoothly(child, newPosition));
         }
     }
 
@@ -202,7 +210,7 @@ public class MergeObjects : MonoBehaviour
         if (isRackObject && rackTransform != null)
         {
             newObject.transform.SetParent(rackTransform);
-            ArrangeObjectsInRack();
+            ArrangeObjectsInRack();  // Déjà présent, mais assurez-vous qu'il est toujours là
         }
     }
 
@@ -228,6 +236,30 @@ public class MergeObjects : MonoBehaviour
             {
                 missionText.CheckWaterBottleExistence();
             }
+        }
+    }
+
+    private IEnumerator MoveObjectSmoothly(Transform objectTransform, Vector3 targetPosition)
+    {
+        float duration = 0.5f;
+        float elapsedTime = 0f;
+        Vector3 startingPosition = objectTransform.position;
+
+        while (elapsedTime < duration)
+        {
+            objectTransform.position = Vector3.Lerp(startingPosition, targetPosition, elapsedTime / duration);
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        objectTransform.position = targetPosition;
+    }
+
+    public void ReorganizeRack()
+    {
+        if (rackTransform != null)
+        {
+            ArrangeObjectsInRack();
         }
     }
 }
