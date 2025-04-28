@@ -80,6 +80,8 @@ TagManager:
   - PierreVolcan
   - DuplicatePierreVolcan
   - BinDetector
+  - Item
+  - NotDefined
   layers:
   - Default
   - TransparentFX

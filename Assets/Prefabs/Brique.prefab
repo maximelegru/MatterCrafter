@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: -6894088715370741219}
   m_Layer: 0
   m_Name: Brique
-  m_TagString: Brique
+  m_TagString: DuplicateBrique
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -266,7 +266,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1

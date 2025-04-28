@@ -7950,7 +7950,7 @@ GameObject:
   - component: {fileID: -1608600777955431903}
   m_Layer: 0
   m_Name: volcanic_rocks_L2_01_URP
-  m_TagString: PierreVolcan
+  m_TagString: DuplicatePierreVolcan
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

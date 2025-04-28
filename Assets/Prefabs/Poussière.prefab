@@ -18,8 +18,8 @@ GameObject:
   - component: {fileID: 7934332126731885877}
   - component: {fileID: 5700343599773691201}
   m_Layer: 0
-  m_Name: "Poussie\u0300re"
-  m_TagString: "Poussi\xE8re"
+  m_Name: "Poussi\xE8re"
+  m_TagString: "DuplicatePoussi\xE8re"
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ MonoBehaviour:
   m_SnapToColliderVolume: 1
   m_ReinitializeDynamicAttachEverySingleGrab: 1
   m_AttachEaseInTime: 0.15
-  m_MovementType: 2
+  m_MovementType: 0
   m_VelocityDamping: 1
   m_VelocityScale: 1
   m_AngularVelocityDamping: 1
